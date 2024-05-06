@@ -3,13 +3,20 @@ package com.bansena.Entidades;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CuentaBancaria {
+public class CuentaBancaria <T extends Habilitantes> {
 
       Long numero;
       Double saldoInicial;
       String divisa;
 
       TarjetaDebito TarjetaDebito;
+
+      public CuentaBancaria(Long numero, Double saldoInicial, String divisa, TarjetaDebito<T> TarjetaDebito) {
+            this.numero = numero;
+            this.saldoInicial = saldoInicial;
+            this.divisa = divisa;
+            this.TarjetaDebito = TarjetaDebito;
+      }
 
       public Long getNumero() {
             return numero;
@@ -41,11 +48,16 @@ public class CuentaBancaria {
       }
 
 
-      public CuentaBancaria(Long numero, Double saldoInicial, String divisa) {
-            this.numero = numero;
-            this.saldoInicial = saldoInicial;
-            this.divisa = divisa;
+      public TarjetaDebito getTarjetaDebito() {
+            return TarjetaDebito;
       }
+
+
+      public void setTarjetaDebito(TarjetaDebito tarjetaDebito) {
+            TarjetaDebito = tarjetaDebito;
+      }
+
+
 
       List <CuotaDeManejo> lManejos = 
             new ArrayList<CuotaDeManejo>();

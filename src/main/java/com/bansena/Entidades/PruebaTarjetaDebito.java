@@ -21,10 +21,9 @@ public class PruebaTarjetaDebito {
         t1.setCuotaDeManejo(cm);
 
         //C
-        CuentaBancaria cb = new CuentaBancaria(1234567890L, 
-                                                1000000.0, 
-                                                "COL");
-
+        CuentaBancaria cb = new CuentaBancaria<>(1234567890L,
+                                                10000000.0,
+                                                "COL", t1);
         //Vinculación
         cb.lManejos.add(cm);
     }
