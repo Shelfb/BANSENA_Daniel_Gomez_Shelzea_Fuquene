@@ -9,6 +9,7 @@ public class PruebaTarjetaDebito {
         Campana c = new Campana(500.00, "ADSO", LocalDate.
         now(), LocalDate.of(2024, 8, 6));
 
+
         //Crear la cuota de manejo 
         CuotaDeManejo<Campana> cm = new CuotaDeManejo<Campana>(c);
 
@@ -34,9 +35,9 @@ public class PruebaTarjetaDebito {
         
 
         System.out.println("Tarjeta de Debito");
-        System.out.println("Número de tarjeta: " + t1.getNumeroTarjeta());
-        System.out.println("Fecha de expedición: " + t1.getFechaVencimiento());
-        System.out.println("Tope: " + t1.getTope());
+        System.out.println("Número de tarjeta: " + cb.TarjetaDebito.getNumeroTarjeta());
+        System.out.println("Fecha de expedición: " + cb.TarjetaDebito.getFechaVencimiento());
+        System.out.println("Tope: " + cb.TarjetaDebito.getTope());
 
         
         System.out.println("Campaña");
