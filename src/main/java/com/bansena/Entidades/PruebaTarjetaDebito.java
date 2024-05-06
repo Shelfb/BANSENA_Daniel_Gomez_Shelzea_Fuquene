@@ -26,5 +26,31 @@ public class PruebaTarjetaDebito {
                                                 "COL", t1);
         //Vinculación
         cb.lManejos.add(cm);
+
+        System.out.println("Cuenta bancaria");                  
+        System.out.println("Número de cuenta: " + cb.getNumero());
+        System.out.println("Saldo: " + cb.getSaldoInicial());
+        System.out.println("Divisa: " + cb.getDivisa());
+        
+
+        System.out.println("Tarjeta de Debito");
+        System.out.println("Número de tarjeta: " + t1.getNumeroTarjeta());
+        System.out.println("Fecha de expedición: " + t1.getFechaVencimiento());
+        System.out.println("Tope: " + t1.getTope());
+
+        
+        System.out.println("Campaña");
+        System.out.println("Valor de la campaña: " + c.getValor());
+        System.out.println("Código de la campaña: " + c.getNombre());
+        System.out.println("Fecha de inicio: " + c.getFechaInicio());
+        System.out.println("Fecha de fin: " + c.getFechaFin());
+
+
+
+        for (Object obj : cb.lManejos) {
+            CuotaDeManejo<?> cM = (CuotaDeManejo<?>) obj;
+            System.out.println("\t" + cm);
+        }  
     }
+
 }

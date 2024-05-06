@@ -70,4 +70,9 @@ public class CuentaBancaria <T extends Habilitantes> {
             public void setlManejos(List<CuotaDeManejo> lManejos) {
                   this.lManejos = lManejos;
             }
+
+            public String getMoneda() {
+                  // TODO Auto-generated method stub
+                  throw new UnsupportedOperationException("Unimplemented method 'getMoneda'");
+            }
 }
