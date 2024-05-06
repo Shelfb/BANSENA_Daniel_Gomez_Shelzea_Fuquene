@@ -47,8 +47,6 @@ public class CuentaBancaria {
             this.divisa = divisa;
       }
 
-
-
       List <CuotaDeManejo> lManejos = 
             new ArrayList<CuotaDeManejo>();
 
@@ -60,5 +58,4 @@ public class CuentaBancaria {
             public void setlManejos(List<CuotaDeManejo> lManejos) {
                   this.lManejos = lManejos;
             }
-
 }
